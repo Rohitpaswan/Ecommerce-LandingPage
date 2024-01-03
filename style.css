@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================================
+                Header
+   ==============================================*/
+.header {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 0, 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    height: auto;
+}
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 3.1vw;
+    padding-right: 3.5vw;
+    margin-right: 15px;
+    list-style: none;
+}
+
+.navbar-link {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.3s;
+
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: white
+}
+
+.moblie-navbar-btn {
+    display: none;
+}
+
+.moblie-nav-icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+
+
+/* =====================================================
+        Mobile-devices
+   ==================================================*/
+/* 980 px */
+
+@media (max-width:980px) {
+    .moblie-navbar-btn {
+        display: block;
+        border: 2px solid black;
+        padding: .3rem .7rem;
+        margin-right: 25px;
+
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+
+    }
+
+    .ri-close-line {
+        display: none;
+    }
+
+    .navbar {
+
+        width: 100%;
+        height: 100vh;
+        background-color: lightgrey;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        /* Transitions Effect*/
+        transform: translateX(-100%);
+        transition: all 0.5s ease-in-out;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        padding-top: 20%;
+        font-size: 2rem;
+
+    }
+
+    /***** active class is being used *****/
+
+    .active .navbar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .moblie-navbar-btn {
+        display: block;
+    }
+}
+
+
+
+/*  ===============================================
+                Main Section
+================================================*/
+
+/**** Cover Section ****/
+
+.banner-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 18vw;
+    padding-right: 2vw;
+}
+
+/* Background image container */
+.banner-container {
+    width: 100vw;
+
+    height: 100vh;
+    /* Place the background behind content */
+    background-image: url('./Img/banner.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+
+
+
+
+.banner h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.banner h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+.banner h5 {
+    color: white;
+}
+
+.banner span {
+    color: rgba(239, 203, 136, 0.918);
+}
+
+.shop__now {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .5rem;
+    border-radius: 8px;
+    color: rgba(239, 203, 136, 0.918);
+    background-color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button :hover {
+    background-color: lightblue;
+
+}
+
+/* ==============================================
+            New section
+===========================================*/
+
+#new .one {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+
+}
+
+#new .one img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+#new .one .details {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3ms ease;
+    position: absolute;
+    padding-top: 5rem;
+    padding-left: 2rem;
+
+
+
+}
+
+
+#new .one:hover .details {
+    cursor: pointer;
+    background-color: rgba(245, 178, 178, 0.7);
+}
+
+
+#new .one button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: .3ms ease;
+
+}
+
+/*************check*********************/
+.one .details button :hover {
+    color: #fff;
+}
+
+/* ==============================================
+            Featured Section
+===========================================*/
+#featured hr{
+    margin: 0 auto;
+    width: 30%; 
+    border: none;
+    border-top: 2px solid  rgba(101, 74, 24, 0.918);
+}
+
+#featured p {
+    padding-top: 3px;
+    text-align: center;
+}
+
+.product img {
+    width: 18rem;
+    height: 18rem;
+    transition: .3ms all;
+    border-radius: 8px;
+
+
+}
+
+
+
+#featured .product {
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+}
+
+.plist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+}
+
+.product img:hover {
+    opacity: .7;
+}
+
+.product .pbtn {
+    background: #fb774f;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3ms all;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: .7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.product:hover .pbtn {
+    opacity: 1;
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+/* ==============================================
+            Banner Section
+===========================================*/
+
+
+#banner__2{
+    background-image: url('./Img/Banner/2.jpg');
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: .8rem;
+
+    
+}
+
+
+#banner__2 .buy__btn {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .5rem;
+    border-radius: 8px;
+    color: rgba(239, 203, 136, 0.918);
+    background-color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.banner2__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    padding-left: 15vw;
+    padding-right: 2.2vw;
+}
+
+.banner2__container  span{
+    color: rgba(225, 177, 89, 0.918);
+}
+
+
+
+/* ==============================================
+            Banner Section
+===========================================*/
+
+footer {
+    background: linear-gradient(45deg, #222121, #101010);
+    background-size: 200% 200%;
+    animation: shiny 3s infinite;
+    padding: 20px;
+    color: white; /* Set text color to be visible on dark background */
+  }
+  
+
+  
+  .contact__list{
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: .5rem;
+  }
+  
+  .contact__list li{
+    padding-left: 1rem;
+    
+  }
